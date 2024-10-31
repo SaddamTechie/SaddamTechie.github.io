@@ -30,7 +30,7 @@
     <!-- Header -->
     <header class="bg-[#FFECC8] text-black p-2 fixed top-0 left-0 right-0 z-50">
       <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-3xl font-bold">Lee</h1>
+        <h1 class="hidden sm:block sm:text-3xl sm:font-bold">Lee</h1>
         <nav>
           <ul class="flex space-x-4 gap-2">
             <li><a href="#about" class="hover:underline">About</a></li>
@@ -44,8 +44,8 @@
     <div class="scroll-container">
     <section id="about" class="py-12 section h-screen">
       <div class="container mt-8 mx-auto px-4">
-        <h2 class="text-2xl font-bold text-center">About Me</h2>
-        <div class="grid grid-cols-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2">
+          <figure class="p-5 sm:order-2"><img src="images/hero.jpg" alt="image" style="transform: scaleX(-1);" class="w-72 h-72" /></figure>
           <div class="text-center text-lg flex items-center justify-center">
           <div class="flex-row">
             <span class="flex">  
@@ -61,7 +61,6 @@
              <button class="rounded-md bg-blue-600 w-40 p-2 text-white">Contact Me</button>
         </div>
       </div> 
-      <figure class="p-5"><img src="images/hero.jpg" alt="image" style="transform: scaleX(-1);" class="w-72 h-72" /></figure>
         </div>
       </div>
     </section>
