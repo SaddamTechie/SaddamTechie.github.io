@@ -1,16 +1,8 @@
-/* #typing-text {
-    opacity: 0;
-    animation: typing 3s linear infinite;
-  }
-  
-  @keyframes typing {
-    0% {
-      transform: translateY(-100%);
-    }
-    50% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-100%);
-    }
-  } */
+@font-face {
+  font-family: 'MadeMirage'; /* Choose a name for your font */
+  src: url('./fonts/MADE Mirage Medium PERSONAL USE.otf') format('opentype'); /* Adjust the path as needed */
+}
+
+.primaryFont {
+  font-family: 'MadeMirage', sans-serif; /* Fallback to sans-serif */
+}
