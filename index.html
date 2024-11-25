@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <!-- Open graph tags -->
-    <meta property="og:title" content="Saddam Saku:Software Engineer" />
-    <meta property="og:description" content="low-level nerd" />
-    <meta property="og:image" content="images/profile.jpeg" />
+    <meta property="og:title" content="Saddam Saku" />
+    <meta property="og:description" content="software engineer" />
+    <meta property="og:image" content="https://saddamtechie.github.io/images/profile.jpeg" />
     <meta property="og:url" content="https://saddamtechie.github.io/" />
     <!--  End of graph tags-->
     <meta charset="UTF-8" />
@@ -48,7 +48,7 @@
             <div
               class="text-[35px] sm:text-[60px] mt-[14px] sm:mt-[22px] w-[342px] h-[77px] sm:w-[548px] sm:h-[136px] primaryFont sm:leading-[56px] leading-[41px]"
             >
-              Let’s craft your next amazing Website
+              Let’s craft your next amazing&nbsp;<span id="gig"></span>
             </div>
             <div
               class="text-[15px] sm:text-[25px] text-[#747171] mt-[20px] w-full"
@@ -68,11 +68,13 @@
                 Contact
               </button>
               <div class="relative">
+                <a href="saddamresume2024.pdf">
                 <button
                   class="w-[148px] sm:w-[237px] h-[46px] sm:h-[73px] bg-white border-2 border-[#A37E2C] rounded-[10px]"
                 >
                   Resume
                 </button>
+                </a>
                 <div
                   class="absolute size-[20px] sm:size-[30px] right-[14px] sm:right-[22px] top-[12px] sm:top-[19px]"
                 >
@@ -245,7 +247,7 @@
         </h3>
         <div
           id="questionsContainer"
-          class="flex flex-col gap-y-[10px] w-[344px] sm:w-[1100px] text-[15px] sm:text-[25px]"
+          class="pl-[10px] flex flex-col gap-y-[10px] w-[344px] sm:w-[1100px] text-[15px] sm:text-[25px]"
         >
           <!-- Quiz Skeleton -->
           <div class="quizSkeleton relative bg-white rounded-md animate-pulse">
@@ -296,8 +298,8 @@
       </footer>
       <!--  End of Footer-->
     </div>
-    <div id="formModal" class="hidden rounded-md p-5 fixed inset-0 left-[20px] right-[20px] sm:left-[40px] sm:right-[40px] bottom-[70px] top-[70px] sm:bottom-[150px] sm:top-[150px]  flex items-center justify-center bg-gray-300  z-50">
-      <form id="messageForm" class="relative flex flex-col gap-y-[10px] w-[344px] sm:w-[1100px] text-[15px] sm:text-[25px]">
+    <div id="formModal" class="rounded-md p-5 fixed inset-0 left-[20px] right-[20px] sm:left-[20px] sm:right-[20px] bottom-[20px] top-[20px]  sm:bottom-[80px] sm:top-[80px] lg:bottom-[60px] lg:top-[60px] flex items-center justify-center bg-gray-300  z-50">
+      <form id="messageForm" class=" relative flex flex-col  w-[344px] sm:w-[300px] md:w-[400px]  lg:w-[500px] text-[15px] sm:text-[25px]">
         <label class="text-[#006039]" for="fullName">Full Name *</label>
         <input type="text" name="fullName" id="fullName" class="rounded-md p-2">
         
@@ -307,7 +309,7 @@
         <label class="mt-[10px] text-[#006039]" for="message">Message *</label>
         <textarea rows="3" name="message" id="message" class="rounded-md p-2"></textarea>
         
-        <button type="submit" class="mt-[10px] bg-blue-500 text-white rounded-md p-2 hover:bg-blue-600">Submit</button>
+        <button type="submit" class="relative mt-[10px] bg-[#006039] text-white rounded-md p-2 hover:bg-blue-600">Submit<div id="submitSpinner" class="hidden absolute top-[7px] right-[10px] sm:right-[20px] h-4 w-4 sm:h-6 sm:w-6 animate-spin rounded-full border-b-2 border-current"></div></button>
     </form>
     <button id="closeModalButton" class="absolute top-[20px] right-[20px] bg-[#006039] hover:bg-red-500 text-white p-3 rounded-[50px] font-bold">x</button>
   </div>

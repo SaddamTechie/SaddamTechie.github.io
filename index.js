@@ -17,6 +17,30 @@ const closeModalButton = document.getElementById('closeModalButton');
 const messageForm = document.getElementById('messageForm');
 const formModal = document.getElementById('formModal');
 const alertDiv = document.getElementById('alertDiv');
+const submitSpinner = document.getElementById('submitSpinner');
+
+const gig = document.getElementById('gig');
+const mygigs = ["Website", "UI/UX", "API","App"];
+let currentIndex = 0;
+
+function updateGig(){
+    gig.classList.remove('fade-in');
+    gig.classList.add('fade-out');
+    setTimeout(function(){
+        gig.textContent = mygigs[currentIndex];
+        gig.classList.remove('fade-out');
+        gig.classList.add('fade-in');
+        currentIndex++;
+        if (currentIndex >= mygigs.length) {
+            currentIndex = 0;
+        }
+    },500)
+}
+
+updateGig();
+
+setInterval(updateGig, 3000);
+
 
 const openModal = ()=> {
     formModal.classList.remove('hidden');
@@ -32,7 +56,8 @@ const closeModal = () =>{
 
 messageForm.addEventListener('submit',async function(event){
     event.preventDefault();
-
+    submitSpinner.classList.remove('hidden');
+    submitSpinner.classList.add('block');
     const formData = new FormData(messageForm);
 
     const response = await fetch(`${apiUrl}/api/collections/messages/records`,{
@@ -42,6 +67,8 @@ messageForm.addEventListener('submit',async function(event){
     if(response.ok){
         const data = await response.json();
         messageForm.reset();
+        submitSpinner.classList.remove('block');
+        submitSpinner.classList.add('hidden');
         closeModal();
         alertDiv.textContent = "Submitted Successfully";
         alertDiv.classList.remove('hidden');
@@ -279,5 +306,4 @@ document.addEventListener('click',function(event){
         closeModal();
     }
 })
-
 
