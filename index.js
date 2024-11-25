@@ -1,8 +1,59 @@
+const apiUrl = 'https://saddam.pockethost.io';
 const expertiseContainer = document.getElementById("expertiseContainer");
 const technologyContainer = document.getElementById("technologyContainer");
 const projectsContainer = document.getElementById('projectsContainer');
 const questionsContainer = document.getElementById('questionsContainer');
-const apiUrl = 'https://saddam.pockethost.io';
+
+//Skeletons
+const expertiseSkeletons = document.getElementsByClassName('expertiseSkeleton');
+const technologySkeletons = document.getElementsByClassName('technologySkeleton');
+const projectSkeletons = document.getElementsByClassName('projectSkeleton');
+const quizSkeletons = document.getElementsByClassName('quizSkeleton');
+
+//Modal
+const contactButton = document.getElementById('contactButton');
+const contactButton2 = document.getElementById('contactButton2');
+const closeModalButton = document.getElementById('closeModalButton');
+const messageForm = document.getElementById('messageForm');
+const formModal = document.getElementById('formModal');
+const alertDiv = document.getElementById('alertDiv');
+
+const openModal = ()=> {
+    formModal.classList.remove('hidden');
+    formModal.classList.add('block');
+}
+
+const closeModal = () =>{
+    formModal.classList.remove('block');
+    formModal.classList.add('hidden');
+}
+
+//Submit button
+
+messageForm.addEventListener('submit',async function(event){
+    event.preventDefault();
+
+    const formData = new FormData(messageForm);
+
+    const response = await fetch(`${apiUrl}/api/collections/messages/records`,{
+        method:'POST',
+        body:formData
+    })
+    if(response.ok){
+        const data = await response.json();
+        messageForm.reset();
+        closeModal();
+        alertDiv.textContent = "Submitted Successfully";
+        alertDiv.classList.remove('hidden');
+
+        // Set a timeout to hide the alert after 3 seconds
+        setTimeout(() => {
+        alertDiv.classList.add('hidden');
+            }, 3000);
+        }
+})
+
+
 
 
 const fetchExpertise = async () =>{
@@ -11,6 +62,9 @@ const fetchExpertise = async () =>{
         if(response.ok){
         const {items:expertiseData} = await response.json();
         expertiseData.map((expertise)=>{
+            for(let i = 0;i<expertiseSkeletons.length;i++){
+                expertiseSkeletons[i].classList.add('hidden');
+            }
             const expertiseCard = document.createElement('div');
             const title = document.createElement('h4');
             const imageDiv = document.createElement('imageDiv');
@@ -46,6 +100,9 @@ const fetchTechnology = async () =>{
         if(response.ok){
         const {items:coreTechnologies} = await response.json();
         coreTechnologies.map((technology)=>{
+            for(let i = 0;i<technologySkeletons.length;i++){
+                technologySkeletons[i].classList.add('hidden');
+            }
             const iconCard = document.createElement('div');
             const link = document.createElement('a');
             const icon = document.createElement('img');
@@ -75,6 +132,9 @@ const fetchFeaturedProjects = async () =>{
         if(response.ok){
         const {items:featuredProjects} = await response.json();
         featuredProjects.map((project)=>{
+            for(let i = 0;i<projectSkeletons.length;i++){
+                projectSkeletons[i].classList.add('hidden');
+            }
             const projectCard = document.createElement('div');
             projectCard.className = "bg-white w-[349px] h-[281px] rounded-md"
             const imageDiv = document.createElement('div');
@@ -151,6 +211,9 @@ const fetchQuizz = async () =>{
         const {items:commonQuiz} = await response.json();
         
         commonQuiz.map((item)=>{
+            for(let i = 0;i<quizSkeletons.length;i++){
+                quizSkeletons[i].classList.add('hidden');
+            }
             let isAnswerVisible = false;
             const quizCard = document.createElement('div');
             quizCard.className = "relative bg-white rounded-md";
@@ -187,11 +250,34 @@ const fetchQuizz = async () =>{
 }
 
 
+
+ 
+
+
 fetchExpertise();
 fetchTechnology();
 fetchFeaturedProjects();
 fetchQuizz();
 
 
+closeModalButton.addEventListener('click',function(){
+    closeModal();
+})
+
+
+contactButton.addEventListener('click',function(){
+    openModal();
+})
+
+contactButton2.addEventListener('click',function(){
+    openModal();
+})
+
+document.addEventListener('click',function(event){
+    const isCickedInside = formModal.contains(event.target) || event.target === contactButton || event.target ===contactButton2;
+    if(!isCickedInside){
+        closeModal();
+    }
+})
 
 

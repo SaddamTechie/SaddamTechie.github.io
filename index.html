@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Open graph tags -->
+    <meta property="og:title" content="Saddam Saku:Software Engineer" />
+    <meta property="og:description" content="low-level nerd" />
+    <meta property="og:image" content="images/profile.jpeg" />
+    <meta property="og:url" content="https://saddamtechie.github.io/" />
+    <!--  End of graph tags-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="index.css" />
@@ -10,18 +16,13 @@
   <body class="bg-[#E9E2D2]">
     <header>
       <div
-        class="flex w-full h-[40px] sm:h-[60px] fixed top-0 right-0 left-0 z-50 bg-white justify-center justify-evenly text-[12px] sm:text-[25px]"
+        class="flex w-full h-[40px] sm:h-[60px] text-[#006039]  fixed top-0 right-0 left-0 z-50 pt-[10px] bg-white justify-center justify-evenly text-[12px] font-semibold sm:text-[25px]"
       >
-        <a href="#skills"><p>Skills</p></a>
-        <a href="#projects"><p>Projects</p></a>
-        <a href="#contact"><p>Contact</p></a>
-        <div class="size-[20px] sm:size-[45px]">
-          <img
-            src="https://img.icons8.com/?size=100&id=VTboxrtZnBOR&format=png&color=000000"
-            alt="icon"
-            class="object-cover"
-          />
-        </div>
+        <a href="#skills"><p class="hover:text-black">Skills</p></a>
+        <a href="#projects"><p class="hover:text-black">Projects</p></a>
+        <a href="#contact"><p class="hover:text-black">Contact</p></a>
+      </div>
+      <div id="alertDiv" class="hidden text-center rounded-md fixed p-5 text-xl  top-[60px] sm:top-[100px] right-[20px] left-[20px] bg-[#006039] text-white">
       </div>
     </header>
     <div class="container p-[25px]">
@@ -31,11 +32,11 @@
           class="w-full grid grid-cols-1 sm:grid-cols-[auto_661px] sm:gap-[38px] mt-[50px]"
         >
           <div id="info w-full">
-            <div class="flex flex-row w-full gap-[5px] sm:w-[515px]">
+            <div class="flex flex-row w-full gap-[10px] sm:w-[515px]">
               <div
                 class="w-[55px] h-[55px] sm:w-[126px] sm:h-[153px] basis-1/4"
               >
-                <img src="images/hero.jpg" class="object-cover" alt="photo" />
+                <img src="images/profile.jpeg" class="object-cover rounded-lg" alt="photo" />
               </div>
               <div
                 class="w-full text-[#747171] text-[20px] sm:text-[38px] flex flex-col sm:w-[375px] sm:h-[136px]"
@@ -61,6 +62,7 @@
               class="flex gap-[36px] mt-[38px] sm:text-[24px]"
             >
               <button
+                id="contactButton"
                 class="w-[148px] sm:w-[237px] h-[46px] sm:h-[73px] bg-[#A37E2C] rounded-[10px] text-white"
               >
                 Contact
@@ -83,30 +85,45 @@
               </div>
             </div>
             <div id="socialMedia" class="flex gap-[11px] mt-[30px]">
-              <div class="w-[25px] h-[25px] sm:w-[40px] sm:h-[40px]">
-                <img
-                  src="https://img.icons8.com/?size=100&id=8808&format=png&color=000000"
-                  alt=""
-                />
-              </div>
-              <div class="w-[25px] h-[25px] sm:w-[40px] sm:h-[40px]">
-                <img
-                  src="https://img.icons8.com/?size=100&id=110895&format=png&color=000000"
-                  alt=""
-                />
-              </div>
-              <div class="w-[25px] h-[25px] sm:w-[40px] sm:h-[40px]">
-                <img
-                  src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000"
-                  alt=""
-                />
-              </div>
-              <div class="w-[25px] h-[25px] sm:w-[40px] sm:h-[40px]">
-                <img
-                  src="https://img.icons8.com/?size=100&id=12623&format=png&color=000000"
-                  alt=""
-                />
-              </div>
+              <a href="https://www.linkedin.com/in/saddam-saku" target="_blank">
+                <div class="w-[25px] h-[25px] sm:w-[40px] sm:h-[40px]">
+                  <img
+                    id="linkedIn"
+                    src="https://img.icons8.com/?size=100&id=8808&format=png&color=000000"
+                    alt="social-icon"
+                  />
+                </div>
+              </a>
+
+              <a href="https://x.com/saddamLSC" target="_blank">
+                <div class="w-[25px] h-[25px] sm:w-[40px] sm:h-[40px]">
+                  <img
+                    id="x"
+                    src="https://img.icons8.com/?size=100&id=110895&format=png&color=000000"
+                    alt="social-icon"
+                  />
+                </div>
+              </a>
+
+              <a href="https://github.com/SaddamTechie" target="_blank">
+                <div class="w-[25px] h-[25px] sm:w-[40px] sm:h-[40px]">
+                  <img
+                    id="github"
+                    src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000"
+                    alt="social-icon"
+                  />
+                </div>
+              </a>
+
+              <!-- <a href="">
+                <div class="w-[25px] h-[25px] sm:w-[40px] sm:h-[40px]">
+                  <img
+                    id="email"
+                    src="https://img.icons8.com/?size=100&id=12623&format=png&color=000000"
+                    alt="social-icon"
+                  />
+                </div>
+              </a> -->
             </div>
           </div>
           <div class="hidden sm:block w-[671px] h-[724px] p-[40px]">
@@ -129,7 +146,22 @@
             id="expertiseContainer"
             class="mt-[11px] sm:mt-[25px] grid grid-cols-2 sm:grid-cols-3 gap-x-[20px] gap-y-[20px] sm:gap-[50px]"
           >
-            <!-- Expertise card rendered here-->
+            <!-- Expertise LoadingSkeleton-->
+            <div class="expertiseSkeleton relative bg-white h-[153px] sm:h-[250px] sm:w-[354px] animate-pulse rounded-md shadow-lg px-[2px] sm:px-[10px] rounded-md">
+              <div class="mt-[10px] h-4 bg-gray-200"></div>
+              <div class="w-[153px] h-[104px] sm:w-[334px] sm:h-[180px] bg-gray-200 mt-2"></div>
+          </div>
+          
+          <div class="expertiseSkeleton relative bg-white h-[153px] sm:h-[250px] sm:w-[354px] animate-pulse rounded-md shadow-lg px-[2px] sm:px-[10px] rounded-md">
+            <div class="mt-[10px] h-4 bg-gray-200"></div>
+            <div class="w-[153px] h-[104px] sm:w-[334px] sm:h-[180px] bg-gray-200 mt-2"></div>
+        </div>
+
+        <div class="expertiseSkeleton relative bg-white h-[153px] sm:h-[250px] sm:w-[354px] animate-pulse rounded-md shadow-lg px-[2px] sm:px-[10px] rounded-md">
+          <div class="mt-[10px] h-4 bg-gray-200"></div>
+          <div class="w-[153px] h-[104px] sm:w-[334px] sm:h-[180px] bg-gray-200 mt-2"></div>
+      </div>
+
           </div>
         </div>
       </section>
@@ -145,7 +177,12 @@
           id="technologyContainer"
           class="sm:p-5 grid grid-cols-3 sm:grid-cols-6 gap-y-[14px]"
         >
-          <!-- Technology icons are displayed here -->
+          <!-- Technology icons skeleton -->
+          <div class="technologySkeleton w-[90px] h-[90px] animate-pulse bg-gray-200 rounded"></div>
+          <div class="technologySkeleton w-[90px] h-[90px] animate-pulse bg-gray-200 rounded"></div>
+          <div class="technologySkeleton w-[90px] h-[90px] animate-pulse bg-gray-200 rounded"></div>
+
+
         </div>
       </div>
 
@@ -161,7 +198,40 @@
             id="projectsContainer"
             class="grid grid-cols-1 sm:grid-cols-3 gap-y-[38px]"
           >
-            <!--    Projects are displayed here -->
+            <!--    Loading Project skeletons -->
+            <div class="projectSkeleton bg-white w-[349px] h-[281px] rounded-md animate-pulse">
+              <div class="w-[325px] h-[175px] p-[10px]">
+                <div class="object-cover w-full h-full bg-gray-200"></div>
+              </div>
+              <div class="h-4 bg-gray-200 rounded w-2/3 mx-auto"></div>
+              <div id="tags" class="flex justify-evenly">
+                <div class="mt-[7px] w-[64px] h-[23px] bg-gray-200 text-center rounded-md"></div>
+              </div>
+            </div>
+
+            <div class="projectSkeleton bg-white w-[349px] h-[281px] rounded-md animate-pulse">
+              <div class="w-[325px] h-[175px] p-[10px]">
+                <div class="object-cover w-full h-full bg-gray-200"></div>
+              </div>
+              <div class="h-4 bg-gray-200 rounded w-2/3 mx-auto"></div>
+              <div id="tags" class="flex justify-evenly">
+                <div class="mt-[7px] w-[64px] h-[23px] bg-gray-200 text-center rounded-md"></div>
+              </div>
+            </div>
+
+            <div class="projectSkeleton bg-white w-[349px] h-[281px] rounded-md animate-pulse">
+              <div class="w-[325px] h-[175px] p-[10px]">
+                <div class="object-cover w-full h-full bg-gray-200"></div>
+              </div>
+              <div class="h-4 bg-gray-200 rounded w-2/3 mx-auto"></div>
+              <div id="tags" class="flex justify-evenly">
+                <div class="mt-[7px] w-[64px] h-[23px] bg-gray-200 text-center rounded-md"></div>
+              </div>
+            </div>
+
+            <!--  End of Projects skeletons-->
+
+            </div>
           </div>
         </div>
       </section>
@@ -171,13 +241,25 @@
         <h3
           class="primaryFont text-center text-[20px] sm:text-[50px] mb-[10px]"
         >
-          More about Me
+          Frequently asked Questions 
         </h3>
         <div
           id="questionsContainer"
           class="flex flex-col gap-y-[10px] w-[344px] sm:w-[1100px] text-[15px] sm:text-[25px]"
         >
-          <!-- Quiz will show here -->
+          <!-- Quiz Skeleton -->
+          <div class="quizSkeleton relative bg-white rounded-md animate-pulse">
+            <div class="p-[10px] sm:p-[20px] h-6 bg-gray-200 rounded-md">
+            </div>
+          </div>
+
+          <div class="quizSkeleton relative bg-white rounded-md animate-pulse">
+            <div class="p-[10px] sm:p-[20px] h-6 bg-gray-200 rounded-md">
+            </div>
+          </div>
+
+
+          <!--  End of Quiz Skeleton-->
         </div>
       </div>
 
@@ -191,6 +273,7 @@
           </h3>
           <div class="flex justify-center">
             <button
+            id="contactButton2"
               class="mt-[23px] sm:mt-[52px] w-[189px] sm:w-[383px] h-[35px] h-[59px] bg-[#006039] text-white text-[15px] sm:text-[25px] rounded-md"
             >
               Let's Work together
@@ -199,21 +282,35 @@
           <div
             class="mt-[50px] sm:mt-[100px] text-[12px] sm:text-[20px] flex justify-evenly"
           >
-            <p>X/Twitter</p>
-            <p>Github</p>
-            <p>LinkedIn</p>
+          <a href="https://x.com/saddamLSC" target="_blank">X/Twitter</p></a>
+          <a href="https://github.com/SaddamTechie" target="_blank"><p>Github</p></a>
+          <a href="https://www.linkedin.com/in/saddam-saku" target="_blank"><p>LinkedIn</p></a>
           </div>
         </div>
       </section>
       <!--  Footer  -->
       <footer
-        class="mt-[50px] sm:mt-[100px] flex justify-center text-[15px] sm:text-[20px]"
+        class="mt-[50px] mb-[30px] sm:mt-[100px] flex justify-center text-[15px] sm:text-[20px]"
       >
-        Made with<span>&nbsp;&#10084;&#65039;&nbsp;</span> by Saddam.
+        Made with<span>&nbsp;&#10084;&#65039;&nbsp;</span> by <a href="https://github.com/SaddamTechie"><span class="text-[#006039] font-semibold">&nbsp;Saddam</span></a>.
       </footer>
-      <div class="animate-spin size-20">|</div>
       <!--  End of Footer-->
     </div>
+    <div id="formModal" class="hidden rounded-md p-5 fixed inset-0 left-[20px] right-[20px] sm:left-[40px] sm:right-[40px] bottom-[70px] top-[70px] sm:bottom-[150px] sm:top-[150px]  flex items-center justify-center bg-gray-300  z-50">
+      <form id="messageForm" class="relative flex flex-col gap-y-[10px] w-[344px] sm:w-[1100px] text-[15px] sm:text-[25px]">
+        <label class="text-[#006039]" for="fullName">Full Name *</label>
+        <input type="text" name="fullName" id="fullName" class="rounded-md p-2">
+        
+        <label class="mt-[10px] text-[#006039]" for="email">Email *</label>
+        <input type="text" name="email" id="email" class="rounded-md p-2">
+        
+        <label class="mt-[10px] text-[#006039]" for="message">Message *</label>
+        <textarea rows="3" name="message" id="message" class="rounded-md p-2"></textarea>
+        
+        <button type="submit" class="mt-[10px] bg-blue-500 text-white rounded-md p-2 hover:bg-blue-600">Submit</button>
+    </form>
+    <button id="closeModalButton" class="absolute top-[20px] right-[20px] bg-[#006039] hover:bg-red-500 text-white p-3 rounded-[50px] font-bold">x</button>
+  </div>
     <script type="module" src="index.js"></script>
   </body>
 </html>
