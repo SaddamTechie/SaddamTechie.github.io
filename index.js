@@ -75,6 +75,7 @@ messageForm.addEventListener('submit',async function(event){
 
         // Set a timeout to hide the alert after 3 seconds
         setTimeout(() => {
+        alertDiv.textContent = "";
         alertDiv.classList.add('hidden');
             }, 3000);
         }
@@ -307,3 +308,14 @@ document.addEventListener('click',function(event){
     }
 })
 
+document.getElementById('downloadLink').addEventListener('click', function() {
+    alertDiv.textContent = "Your download will start shortly";
+    alertDiv.classList.remove('hidden');
+
+    // Set a timeout to hide the alert after 3 seconds
+    setTimeout(() => {
+    alertDiv.textContent = "";
+    alertDiv.classList.add('hidden');
+        }, 3000);
+    }
+);

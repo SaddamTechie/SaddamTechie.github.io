@@ -7,6 +7,7 @@
     <meta property="og:image" content="https://saddamtechie.github.io/images/profile.jpeg" />
     <meta property="og:url" content="https://saddamtechie.github.io/" />
     <!--  End of graph tags-->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="index.css" />
@@ -68,7 +69,7 @@
                 Contact
               </button>
               <div class="relative">
-                <a href="saddamresume2024.pdf">
+                <a id="downloadLink" href="saddamresume2024.pdf">
                 <button
                   class="w-[148px] sm:w-[237px] h-[46px] sm:h-[73px] bg-white border-2 border-[#A37E2C] rounded-[10px]"
                 >
@@ -294,11 +295,11 @@
       <footer
         class="mt-[50px] mb-[30px] sm:mt-[100px] flex justify-center text-[15px] sm:text-[20px]"
       >
-        Made with<span>&nbsp;&#10084;&#65039;&nbsp;</span> by <a href="https://github.com/SaddamTechie"><span class="text-[#006039] font-semibold">&nbsp;Saddam</span></a>.
+        Made with<span>&nbsp;&#10084;&#65039;&nbsp;</span> by <a href="https://github.com/SaddamTechie/saddamtechie.github.io"><span class="text-[#006039] font-semibold">&nbsp;Saddam</span></a>.
       </footer>
       <!--  End of Footer-->
     </div>
-    <div id="formModal" class="rounded-md p-5 fixed inset-0 left-[20px] right-[20px] sm:left-[20px] sm:right-[20px] bottom-[20px] top-[20px]  sm:bottom-[80px] sm:top-[80px] lg:bottom-[60px] lg:top-[60px] flex items-center justify-center bg-gray-300  z-50">
+    <div id="formModal" class="hidden rounded-md p-5 fixed inset-0 left-[20px] right-[20px] sm:left-[20px] sm:right-[20px] bottom-[20px] top-[20px]  sm:bottom-[80px] sm:top-[80px] lg:bottom-[60px] lg:top-[60px] flex items-center justify-center bg-gray-300  z-50">
       <form id="messageForm" class=" relative flex flex-col  w-[344px] sm:w-[300px] md:w-[400px]  lg:w-[500px] text-[15px] sm:text-[25px]">
         <label class="text-[#006039]" for="fullName">Full Name *</label>
         <input type="text" name="fullName" id="fullName" class="rounded-md p-2">
