@@ -26,16 +26,6 @@ store information.The figma file I used is also included.
 I have not included all my projects cause some are still in progress and am also currently building
 an LMS using MERN stack which I will deploy and add to the projects section once am done with it.
 
-# Group Members
-
-1. Hillary Kiprotich https://github.com/Machuge27/SWEngineering/tree/main/Hackathos/Portfolio
-2. Hassan Khalifa- https://github.com/Faruq-Feroz/Hassan-Faruq
-3. Saddam Saku - https://github.com/SaddamTechie/saddamtechie.github.io
-4. Rashid said -https://github.com/SirRasheed/portfoliorasheed.git
-5. Tom Obande - https://github.com/tbrowns/portfolio-group-22
-6. Alexander Brian https://github.com/BrianKachumba/Hackathon1.git
-7. Zachariah Evans https://github.com/Eva254-ke/myportfolio
-8. Joshua Ogallo https://github.com/ogallj/my_portfolio
 
 Contact:
 
